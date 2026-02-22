@@ -1,35 +1,41 @@
+"use client";
+
+const values = [
+  { icon: "💡", title: "Innovation" },
+  { icon: "🤝", title: "Collaboration" },
+  { icon: "🎯", title: "Precision" },
+  { icon: "✨", title: "Impact" },
+];
+
 export default function About() {
   return (
-    <section id="about" className="py-28 px-6 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent pointer-events-none" />
-      <div className="relative max-w-4xl mx-auto">
-        <p className="section-label">Who I am</p>
-        <h2 className="section-heading mb-12">About Me</h2>
-        <div className="relative pl-6 sm:pl-8 border-l-2 border-accent/50 space-y-6">
-          <p className="text-gray-400 text-lg leading-relaxed">
-            I&apos;m a full stack developer with a passion for building fast,
-            scalable, and user-friendly applications. I work across the entire
-            stack—frontend with Angular and React, backend with Node.js, and
-            full-stack with Next.js—and I also work in generative AI, building
-            and integrating intelligent features into products.
+    <section id="about" className="py-20 px-6 bg-surfaceElevated">
+      <div className="max-w-4xl mx-auto">
+        <p className="text-accent font-mono text-sm uppercase tracking-wider mb-2">About Me</p>
+        <h2 className="section-title">
+          Innovate with Intelligence,<br />Build with Purpose
+        </h2>
+        <div className="mt-8 space-y-6 text-gray-300 leading-relaxed reveal">
+          <p>
+            I&apos;m <strong className="text-white">Uzair Ali</strong>, a Full Stack Developer passionate about creating intelligent systems and applications that drive real business value.
           </p>
-          <p className="text-gray-400 text-lg leading-relaxed">
-            I care about clean code, performance, and great UX. When I&apos;m
-            not coding, I like to stay updated with the latest in web tech and
-            contribute to open source when I can.
+          <p>
+            I specialize in <strong className="text-white">full-stack web development</strong>, <strong className="text-white">Generative AI</strong>, and backend architectures using React, Next.js, Angular, and Node.js. My focus is on building smart, scalable solutions that streamline workflows and enhance real-world efficiency.
+          </p>
+          <p>
+            Driven by curiosity and creativity, I transform complex ideas into seamless, high-impact systems that help businesses scale and succeed.
           </p>
         </div>
-        <div className="mt-12 flex flex-wrap gap-4">
-          {["Full Stack", "Generative AI", "Clean Code", "Great UX"].map(
-            (tag) => (
-              <span
-                key={tag}
-                className="px-4 py-2 rounded-full text-sm font-medium border border-white/10 bg-white/5 text-gray-300"
-              >
-                {tag}
-              </span>
-            )
-          )}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12">
+          {values.map((v) => (
+            <div
+              key={v.title}
+              className="reveal p-4 rounded-xl bg-surfaceElevated border border-white/10 text-center hover:border-accent/30 transition-colors"
+            >
+              <span className="text-2xl block mb-2" aria-hidden>{v.icon}</span>
+              <h4 className="font-display font-semibold text-white text-sm">{v.title}</h4>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -6,114 +6,80 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-20 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-16 pb-28 text-center overflow-hidden bg-surface"
     >
-      <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-60 pointer-events-none" />
-      <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-accent/20 rounded-full blur-[100px] animate-float opacity-70" />
+      {/* Warm golden radial glow from bottom-center, dark at top and corners */}
       <div
-        className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-violet/15 rounded-full blur-[120px] animate-float opacity-60"
-        style={{ animationDelay: "2s" }}
-      />
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[80px] animate-glow-pulse pointer-events-none"
-        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse 140% 100% at 50% 110%, rgba(255, 213, 0, 0.35) 0%, rgba(255, 193, 7, 0.2) 25%, rgba(255, 152, 0, 0.08) 50%, transparent 70%)",
+        }}
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-4xl mx-auto">
         <div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/30 bg-accent/5 backdrop-blur-sm mb-8 animate-fade-in opacity-0"
-          style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-surfaceElevated/80 backdrop-blur-sm mb-8 animate-fade-in opacity-0 shadow-[0_0_15px_rgba(255,255,255,0.08)]"
+          style={{ animationFillMode: "forwards" }}
         >
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+            <span className="absolute inline-flex h-full w-full rounded-full bg-neonGreen opacity-75 animate-ping" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-neonGreen" />
           </span>
-          <span className="text-accent font-mono text-sm uppercase tracking-widest">
-            Full Stack Developer · Generative AI
-          </span>
+          <span className="text-white text-sm font-medium">Full Stack Developer & Generative AI</span>
         </div>
+
         <h1
-          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6 animate-slide-up opacity-0"
+          className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl mx-auto mb-6 animate-slide-up opacity-0 leading-tight"
+          style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}
+        >
+          <span className="text-white">Transforming Ideas Into Intelligent Systems </span>
+          <span className="text-accent text-glow-yellow">That Drive Results</span>
+        </h1>
+
+        <p
+          className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto mb-10 animate-slide-up opacity-0"
           style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
         >
-          Hi, I&apos;m{" "}
-          <span className="text-gradient bg-[length:200%_auto] animate-gradient-shift">
-            Uzair Ali
-          </span>
-        </h1>
-        <p
-          className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed animate-slide-up opacity-0"
-          style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
-        >
-          I build modern web applications with Angular, React, Node.js, and
-          Next.js, and work with generative AI. From UI to APIs—full stack, end
-          to end.
+          Specializing in full-stack web apps, generative AI, and backend architectures — I craft cutting-edge solutions that streamline operations and amplify business outcomes.
         </p>
+
         <div
-          className="flex flex-wrap gap-4 justify-center animate-slide-up opacity-0"
-          style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
+          className="flex flex-wrap gap-3 justify-center animate-slide-up opacity-0"
+          style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
         >
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent text-gray-900 font-semibold hover:bg-accentDim transition-colors text-sm"
+          >
+            Book a Discovery Call
+          </a>
           <Link
             href="#projects"
-            className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-accent text-surface font-semibold shadow-glow hover:shadow-glow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/30 text-white font-medium hover:bg-white/10 transition-colors text-sm"
           >
-            View Projects
-            <svg
-              className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
+            Explore Portfolio
           </Link>
-          <Link
-            href="#contact"
-            className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-white/20 text-gray-200 hover:border-accent/50 hover:text-accent hover:bg-accent/5 backdrop-blur-sm transition-all duration-300"
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/20 text-gray-300 font-medium hover:border-neonGreen/50 hover:text-white transition-colors text-sm"
           >
-            Get in Touch
-            <svg
-              className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
+            Message on WhatsApp
+          </a>
+          <a
+            href="#"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/20 text-gray-300 font-medium hover:border-accent/50 hover:text-accent transition-colors text-sm"
+          >
+            Resume
+          </a>
+          <Link
+            href="#projects"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-white/20 text-gray-300 font-medium hover:border-accent/50 hover:text-accent transition-colors text-sm"
+          >
+            View Full Portfolio
           </Link>
         </div>
-      </div>
-
-      <div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-70"
-        aria-hidden
-      >
-        <span className="text-muted text-xs font-mono uppercase tracking-widest">
-          Scroll
-        </span>
-        <svg
-          className="w-6 h-6 text-accent"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
       </div>
     </section>
   );

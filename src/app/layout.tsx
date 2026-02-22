@@ -21,7 +21,7 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Full Stack Developer | Portfolio",
+  title: "Uzair Ali - Full Stack Developer & Generative AI",
   description:
     "Uzair Ali — Full stack developer specializing in Angular, React, Node.js, Next.js, and generative AI.",
 };
@@ -36,7 +36,7 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} ${syne.variable}`}
     >
-      <body className="min-h-screen bg-surface font-sans text-gray-100 antialiased">
+      <body className="min-h-screen bg-surface font-sans text-white antialiased">
         {children}
       </body>
     </html>

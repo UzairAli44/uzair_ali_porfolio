@@ -4,33 +4,43 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative py-10 px-6 border-t border-white/5">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-        <p className="text-gray-500 text-sm">
-          © {year} <span className="text-gray-400 font-medium">Uzair Ali</span>.
-          Built with Next.js.
-        </p>
-        <div className="flex items-center gap-6">
-          <Link
-            href="#hero"
-            className="text-sm text-gray-500 hover:text-accent transition-colors inline-flex items-center gap-1"
-          >
-            Back to top
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 10l7-7m0 0l7 7m-7-7v18"
-              />
-            </svg>
-          </Link>
+    <footer className="py-12 px-6 border-t border-white/10 bg-surface">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+          <div>
+            <p className="font-display text-lg font-bold text-white mb-1">Uzair Ali</p>
+            <p className="text-sm text-muted max-w-xs">Building intelligent systems that drive results</p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-10 sm:gap-16">
+            <div>
+              <h4 className="text-xs font-mono uppercase tracking-wider text-muted mb-3">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><Link href="#hero" className="text-sm text-gray-300 hover:text-accent transition-colors">Home</Link></li>
+                <li><Link href="#about" className="text-sm text-gray-300 hover:text-accent transition-colors">About</Link></li>
+                <li><Link href="#services" className="text-sm text-gray-300 hover:text-accent transition-colors">Services</Link></li>
+                <li><Link href="#projects" className="text-sm text-gray-300 hover:text-accent transition-colors">Portfolio</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-xs font-mono uppercase tracking-wider text-muted mb-3">Connect</h4>
+              <ul className="space-y-2">
+                <li><a href="mailto:chuzairaliuzi877@gmail.com" className="text-sm text-gray-300 hover:text-accent transition-colors">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/uzair-ali-542775185/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-accent transition-colors">LinkedIn</a></li>
+                <li><a href="tel:" className="text-sm text-gray-300 hover:text-accent transition-colors">Phone</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted">© {year} Uzair Ali. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <Link href="#hero" className="text-sm text-muted hover:text-accent transition-colors">Home</Link>
+            <Link href="#about" className="text-sm text-muted hover:text-accent transition-colors">About</Link>
+            <Link href="#services" className="text-sm text-muted hover:text-accent transition-colors">Services</Link>
+            <Link href="#projects" className="text-sm text-muted hover:text-accent transition-colors">Portfolio</Link>
+            <Link href="#experience" className="text-sm text-muted hover:text-accent transition-colors">Experience</Link>
+            <Link href="#contact" className="text-sm text-muted hover:text-accent transition-colors">Contact</Link>
+          </div>
         </div>
       </div>
     </footer>
