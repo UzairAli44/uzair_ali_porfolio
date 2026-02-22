@@ -2,7 +2,7 @@
 
 const jobs = [
   {
-    initial: "Js Developer",
+    initial: "JS",
     role: "Full Stack Developer",
     company: "3S Solution",
     bullets: [
